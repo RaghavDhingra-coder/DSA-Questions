@@ -1,0 +1,21 @@
+class Solution {
+  public:
+    int findMissing(vector<int> &arr) {
+        int d1,d2,d;
+        d1=arr[1]-arr[0];
+        d2=arr[arr.size()-1]-arr[arr.size()-2];
+        if(d1==d2)
+            d=d1;
+        else if(d1<d2)
+            d=d1;
+        else
+            d=d2;
+        for(int i=1;i<arr.size();i++)
+        {
+            if(arr[i]-arr[i-1]!=d)
+            {
+                return arr[i-1]+d;
+            }
+        }
+    }
+};
