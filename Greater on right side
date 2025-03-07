@@ -1,0 +1,21 @@
+class Solution {
+  public:
+    /* Function to replace every element with the
+    next greatest element */
+    vector<int> nextGreatest(vector<int> arr) {
+       
+       int greatest=arr[arr.size()-1];
+       int t;
+       arr[arr.size()-1]=-1;
+       
+       for(int i=arr.size()-2;i>=0;i--)
+       {
+           t=arr[i];
+           arr[i]=greatest;
+           if(t>greatest)
+            greatest=t;
+       }
+       return arr;
+       
+    }
+};
