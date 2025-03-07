@@ -1,0 +1,27 @@
+class Solution {
+  public:
+    void binSort(vector<int> &arr) {
+        int n_zero=0,n_one=1,i;
+        
+        for(i=0;i<arr.size();i++)
+        {
+            if(arr[i]==0)
+                n_zero++;
+            if(arr[i]==1)
+                n_one++;
+        }
+       i=0;
+        while(n_zero)
+        {
+            arr[i]=0;
+            n_zero--;
+            i++;
+        }
+        while(n_one)
+        {
+            arr[i]=1;
+            n_one--;
+            i++;
+        }
+    }
+};
