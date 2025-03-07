@@ -1,0 +1,21 @@
+class Solution {
+  public:
+    long long int totalFine(int date, vector<int> &car, vector<int> &fine) {
+        
+        int total_fine=0;
+        for(int i=0;i<car.size();i++)
+        {
+            if(date%2==0)//even
+            {
+                if(car[i]%2) //odd
+                    total_fine+=fine[i];
+            }
+            else
+            {
+                if(car[i]%2==0)
+                    total_fine+=fine[i];
+            }
+        }
+        return total_fine;
+    }
+};
