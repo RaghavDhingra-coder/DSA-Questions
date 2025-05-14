@@ -15,3 +15,4 @@ class Solution {
 
 in this questions we want to search a given element in an array. here we have to just traverse in whole array and compare each array element with the given element if found return index if 
 not found return -1
+odfjdof
